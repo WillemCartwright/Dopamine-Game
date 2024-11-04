@@ -15,11 +15,11 @@ public class PlayerLook : MonoBehaviour
 
     void Start()
     {
-      Cursor.visible = false;
+      Cursor.visible = true;
     }
     void Update()
     {
-      Cursor.lockState = CursorLockMode.Locked;
+      // Cursor.lockState = CursorLockMode.Locked;
       rotation.y += Input.GetAxis("Mouse X");
       rotation.x += -Input.GetAxis("Mouse Y");
       rotation.x = Mathf.Clamp(rotation.x, -15f, 15f);
