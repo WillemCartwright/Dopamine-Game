@@ -20,10 +20,12 @@ public class MoveObject : MonoBehaviour
 
     void Update()
     {
+        // Check of de P-toets wordt ingedrukt
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (!isHoldingItem)
+            if (!isHoldingItem && CanPickUpItem())
             {
+                // Object oppakken
                 isHoldingItem = true;
                 uiImage.gameObject.SetActive(true);
                 item.GetComponent<Rigidbody>().useGravity = false;
@@ -32,8 +34,9 @@ public class MoveObject : MonoBehaviour
                 item.transform.rotation = guide.transform.rotation;
                 item.transform.parent = tempParent.transform;
             }
-            else
+            else if (isHoldingItem)
             {
+                // Object loslaten
                 isHoldingItem = false;
                 uiImage.gameObject.SetActive(false);
                 item.GetComponent<Rigidbody>().useGravity = true;
@@ -42,10 +45,24 @@ public class MoveObject : MonoBehaviour
             }
         }
 
+        // Houdt het object op de juiste positie als het wordt vastgehouden
         if (isHoldingItem)
         {
             item.transform.position = guide.transform.position;
             item.transform.rotation = guide.transform.rotation;
         }
+    }
+
+    // Controleert of de speler naar het object kijkt
+    bool CanPickUpItem()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            return hit.transform.gameObject == item;
+        }
+        return false;
     }
 }
