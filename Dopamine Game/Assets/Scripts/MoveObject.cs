@@ -21,7 +21,7 @@ public class MoveObject : MonoBehaviour
     void Update()
     {
         // Check of de P-toets wordt ingedrukt
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (!isHoldingItem && CanPickUpItem())
             {
