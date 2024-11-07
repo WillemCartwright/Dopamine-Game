@@ -3,45 +3,36 @@ using UnityEngine.UI;
 
 public class scherm9 : MonoBehaviour
 {
-    public GameObject fifthPanel;   // Het eerste panel met input veld en knop
-    public GameObject sixthPanel;   // Het tweede panel om weer te geven
-    public GameObject seventhPanel; // Derde panel
-    public GameObject eighthPanel;  // Vierde panel
-
-    public Button payButton;        // De bevestigingsknop
-    public Button closeButton;      // De close-knop voor het zesde panel
+    public GameObject fifthPanel;      // Het eerste paneel met invoerveld en knop
+    public GameObject sixthPanel;      // Het tweede paneel
+    public Button payButton;           // De bevestigingsknop
+    public Button closeButton;         // De sluitknop voor het tweede paneel
 
     void Start()
     {
-        // Zorg ervoor dat alleen het vijfde panel zichtbaar is bij de start
+        // Zorg ervoor dat het eerste paneel zichtbaar is en het tweede onzichtbaar bij het starten
         fifthPanel.SetActive(true);
         sixthPanel.SetActive(false);
-        seventhPanel.SetActive(false);
-        eighthPanel.SetActive(false);
 
-        // Link de bevestigingsknop aan de ShowSixthPanel methode
+        // Koppel de bevestigingsknop aan de ShowSixthPanel-methode
         payButton.onClick.AddListener(ShowSixthPanel);
 
-        // Link de close-knop aan de CloseAllPanels methode
-        closeButton.onClick.AddListener(CloseAllPanels);
+        // Koppel de sluitknop aan de CloseSixthPanel-methode
+        closeButton.onClick.AddListener(CloseSixthPanel);
     }
 
-    // Methode om het zesde panel weer te geven en het vijfde panel te verbergen
+    // Methode om het tweede paneel te tonen en het eerste paneel te verbergen
     public void ShowSixthPanel()
     {
-        fifthPanel.SetActive(false);
-        sixthPanel.SetActive(true);
+        fifthPanel.SetActive(false); // Verberg het eerste paneel
+        sixthPanel.SetActive(true);  // Toon het tweede paneel
     }
 
-    // Methode om alle panels te verbergen wanneer de close-knop op het zesde panel wordt ingedrukt
-    public void CloseAllPanels()
+    // Methode om het tweede paneel te verbergen
+    public void CloseSixthPanel()
     {
-        fifthPanel.SetActive(false);
-        sixthPanel.SetActive(false);
-        seventhPanel.SetActive(false);
-        eighthPanel.SetActive(false);
+        sixthPanel.SetActive(false);  // Verberg het tweede paneel
+        fifthPanel.SetActive(true);   // Optioneel: toon het eerste paneel opnieuw
     }
 }
-
-
 
