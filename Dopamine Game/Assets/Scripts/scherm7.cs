@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scherm6 : MonoBehaviour
+public class scherm7 : MonoBehaviour
 {
     public GameObject fifthPanel;   // Het eerste paneel met invoerveld en knop
     public GameObject sixthPanel;   // Het tweede lege paneel
