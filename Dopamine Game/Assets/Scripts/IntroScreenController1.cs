@@ -23,4 +23,3 @@ public class IntroScreenController : MonoBehaviour
         introPanel.SetActive(false);
     }
 }
-
