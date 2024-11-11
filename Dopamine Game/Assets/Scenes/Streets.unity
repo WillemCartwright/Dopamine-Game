@@ -1022,6 +1022,8 @@ MonoBehaviour:
   guide: {fileID: 667826203}
   uiImage: {fileID: 337628930}
   extraUIImage: {fileID: 1134346733}
+  statusText: {fileID: 2043646219}
+  additionalText: {fileID: 1891014834}
 --- !u!114 &23111276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4259,7 +4261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &210620443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10694,7 +10696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &538121721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11548,7 +11550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &579061685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11932,7 +11934,7 @@ GameObject:
   - component: {fileID: 607339305}
   - component: {fileID: 607339304}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: shirt task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22415,7 +22417,7 @@ GameObject:
   - component: {fileID: 1093429584}
   - component: {fileID: 1093429583}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: homeless task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30388,7 +30390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1438001167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31415,7 +31417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1463669976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36136,7 +36138,7 @@ GameObject:
   - component: {fileID: 1634278145}
   - component: {fileID: 1634278144}
   m_Layer: 5
-  m_Name: Text (Legacy) (4)
+  m_Name: grandma task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41293,7 +41295,7 @@ GameObject:
   - component: {fileID: 1867331002}
   - component: {fileID: 1867331001}
   m_Layer: 5
-  m_Name: Text (Legacy) (5)
+  m_Name: medicine task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42146,7 +42148,7 @@ GameObject:
   - component: {fileID: 1891014835}
   - component: {fileID: 1891014834}
   m_Layer: 5
-  m_Name: Text (Legacy) (2)
+  m_Name: flower task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46063,7 +46065,7 @@ GameObject:
   - component: {fileID: 2043646220}
   - component: {fileID: 2043646219}
   m_Layer: 5
-  m_Name: Text (Legacy) (3)
+  m_Name: glasses task
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
