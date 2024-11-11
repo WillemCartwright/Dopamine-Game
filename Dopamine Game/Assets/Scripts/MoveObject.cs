@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +10,8 @@ public class MoveObject : MonoBehaviour
     public Transform guide;            // Het punt waar het object wordt vastgehouden (bijvoorbeeld je hand)
     public Image uiImage;              // De afbeelding die verschijnt wanneer je het object oppakt
     public Image extraUIImage;         // De vink afbeelding die we willen tonen
+    public Text statusText;            // Tekstvak dat groen wordt bij oppakken en wit bij loslaten
+    public Text additionalText;        // Tekstvak dat lichtgrijs begint en wit wordt na oppakken
 
     private bool isHoldingItem = false;
     private bool hasPickedUpItem = false; // Boolean om bij te houden of het item al is opgepakt
@@ -23,6 +24,10 @@ public class MoveObject : MonoBehaviour
         // Zorg ervoor dat uiImage en extraUIImage niet zichtbaar zijn bij het starten
         uiImage.gameObject.SetActive(false); 
         extraUIImage.gameObject.SetActive(false); // Zet de vink afbeelding uit bij het starten
+
+        // Stel startkleuren in voor de teksten
+        statusText.color = Color.white; // statusText start in wit
+        additionalText.color = new Color(0.843f, 0.843f, 0.843f); // Lichtgrijs (hex #D7D7D7)
     }
 
     void Update()
@@ -63,7 +68,13 @@ public class MoveObject : MonoBehaviour
         {
             extraUIImage.gameObject.SetActive(true);  // De vink afbeelding wordt zichtbaar
             hasPickedUpItem = true; // Markeer dat het item is opgepakt
+
+            // Verander additionalText naar wit
+            additionalText.color = Color.white;
         }
+
+        // Verander statusText naar groen (#5BFE59) bij oppakken
+        statusText.color = new Color(0.36f, 0.996f, 0.349f); // Groen (hex #5BFE59)
 
         // Zet de object fysica instellingen
         Rigidbody rb = item.GetComponent<Rigidbody>();
@@ -82,9 +93,12 @@ public class MoveObject : MonoBehaviour
     private void DropItem()
     {
         isHoldingItem = false;
-        
+
         // Verberg de uiImage (alleen de afbeelding voor het object)
-        uiImage.gameObject.SetActive(false);  
+        uiImage.gameObject.SetActive(false);
+
+        // Zet statusText terug naar wit bij loslaten
+        statusText.color = Color.white;
 
         // Zet de object fysica instellingen terug
         Rigidbody rb = item.GetComponent<Rigidbody>();
@@ -110,5 +124,4 @@ public class MoveObject : MonoBehaviour
         }
         return false;
     }
-    
 }
