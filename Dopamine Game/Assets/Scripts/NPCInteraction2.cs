@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class NPCInteraction : MonoBehaviour
+public class NPCInteraction2 : MonoBehaviour
 {
     public DialogueManager dialogueManager;
 
     // Unieke dialoog voor deze NPC
-    private string[] npcDialogue = { 
-        "NPC 1: Hallo daar! Wat brengt je naar de stad?",
-        "NPC 1: Geniet van je verblijf!"
+    private string[] npcDialogue = {
+        "NPC 2: Wat brengt jou hier?",
+        "NPC 2: Wees voorzichtig in deze buurt."
     };
 
-    private string[] playerDialogue = { 
-        "Jij: Dankjewel! Ik ben hier voor avontuur.",
-        "Jij: Ik zal zeker genieten, bedankt!"
+    private string[] playerDialogue = {
+        "Jij: Ik kijk gewoon rond.",
+        "Jij: Bedankt voor de waarschuwing!"
     };
 
     private bool isPlayerNearby = false;
@@ -41,3 +41,4 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 }
+
