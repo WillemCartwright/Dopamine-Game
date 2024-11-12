@@ -3215,17 +3215,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139900179}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 390036222}
-  m_Father: {fileID: 286752312}
+  m_Father: {fileID: 2059477888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000026226, y: 65}
+  m_AnchoredPosition: {x: -0, y: 55.162598}
   m_SizeDelta: {x: 182.7018, y: 48.1613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139900181
@@ -6091,14 +6091,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 139900180}
   - {fileID: 2059477888}
   m_Father: {fileID: 1538216401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14, y: 10.873993}
-  m_SizeDelta: {x: -646.2402, y: -108.4071}
+  m_AnchoredPosition: {x: -10.638428, y: 6.3652}
+  m_SizeDelta: {x: -782.8517, y: -114.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286752313
 MonoBehaviour:
@@ -38719,7 +38718,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655679796}
-  - component: {fileID: 1655679797}
   m_Layer: 0
   m_Name: PanelSwitcher
   m_TagString: Untagged
@@ -38742,21 +38740,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1655679797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655679794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894927eb399fbee4c895ff03b1e421e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel1: {fileID: 1045307890}
-  panel2: {fileID: 286752311}
-  panel3: {fileID: 1787243916}
 --- !u!1 &1657276861
 GameObject:
   m_ObjectHideFlags: 0
@@ -48914,7 +48897,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 139900180}
   m_Father: {fileID: 286752312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
