@@ -4974,8 +4974,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
   m_PrefabInstance: {fileID: 1469970313}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &226613734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5186,7 +5184,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc9119e42a3b18c45bcb65f8de08e2a3, type: 3}
   m_PrefabInstance: {fileID: 227822700}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1001 &229148922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13612,8 +13609,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1292804893}
   m_SourcePrefab: {fileID: 100100000, guid: b484aec77272f0f448fbf79b23c56f60, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &605242140
 GameObject:
   m_ObjectHideFlags: 0
@@ -13768,7 +13763,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 317f748a8790f2f40a3ae84271a69fd3, type: 3}
   m_PrefabInstance: {fileID: 984510939}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &607339302
 GameObject:
   m_ObjectHideFlags: 0
@@ -28770,7 +28764,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dbbe48b10065e384cbf31f478aef863f, type: 3}
   m_PrefabInstance: {fileID: 1180720389}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1185250149
 GameObject:
   m_ObjectHideFlags: 0
@@ -29203,8 +29196,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187821243}
   m_CullTransparentMesh: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &1188156321
 GameObject:
   m_ObjectHideFlags: 0
@@ -48956,8 +48947,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.52406174, y: 2.4884548, z: 0.15470907}
   m_Center: {x: 0.18100432, y: 1.1727638, z: 0.0058908947}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &1930989983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49094,7 +49083,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933004321}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1001 &1935677192
 PrefabInstance:
   m_ObjectHideFlags: 0
