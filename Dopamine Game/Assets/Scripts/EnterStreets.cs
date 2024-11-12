@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnterLuxis : MonoBehaviour
+public class EnterStreets : MonoBehaviour
 {
     void OnTriggerEnter() {
-        SceneManager.LoadScene("Shop", LoadSceneMode.Single);
+        SceneManager.LoadScene("Streets", LoadSceneMode.Single);
     }
 
 }

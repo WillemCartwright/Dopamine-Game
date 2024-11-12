@@ -39266,7 +39266,7 @@ GameObject:
   - component: {fileID: 1646998806}
   - component: {fileID: 1646998807}
   m_Layer: 0
-  m_Name: Speler
+  m_Name: speler
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
