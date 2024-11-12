@@ -1,25 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Referentie naar de UI-elementen
-    public GameObject panel;             // Panel dat de knop bevat
-    public Button payButton;             // Knop om te betalen
+    // Referentie naar het UI-element
+    public GameObject panel;             // Panel dat zichtbaar/onniet zichtbaar gemaakt moet worden
 
     void Start()
     {
         // Maak het paneel in het begin onzichtbaar
         panel.SetActive(false);
-
-        // Koppel de payButton aan de ShowPayPanel-methode
-        payButton.onClick.AddListener(ShowPayPanel);
     }
 
-    // Methode om het paneel zichtbaar te maken wanneer op "Pay" wordt gedrukt
-    public void ShowPayPanel()
+    // Methode om het paneel zichtbaar te maken
+    public void Show1_1Panel()
     {
-        panel.SetActive(true); // Maak het paneel zichtbaar wanneer de knop wordt ingedrukt
-        Debug.Log("Pay button pressed");
+        panel.SetActive(true); // Maak het paneel zichtbaar wanneer deze methode wordt aangeroepen
+        Debug.Log("Panel is now visible");
     }
 }

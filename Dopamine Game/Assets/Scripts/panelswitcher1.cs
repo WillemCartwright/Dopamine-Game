@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class panelswitcher : MonoBehaviour
+public class panelswitcher1 : MonoBehaviour
 {
     // Verwijzingen naar de panels
     public GameObject panel1;
@@ -16,28 +16,26 @@ public class panelswitcher : MonoBehaviour
         panel3.SetActive(false);
     }
 
-    // Functie om naar Panel 5 te gaan (reeds werkend volgens jou)
+    // Functie om naar Panel 1 te gaan
     public void ShowPanel1()
     {
-        // Zet Panel 5 aan, en alle andere panels uit
         panel1.SetActive(true);
         panel2.SetActive(false);
         panel3.SetActive(false);
     }
 
-    // Functie om naar Panel 6 te gaan
+    // Functie om naar Panel 2 te gaan
     public void ShowPanel2()
     {
-        // Panel 1 uitzetten en Panel 2 aanzetten
         panel1.SetActive(false);
         panel2.SetActive(true);
         panel3.SetActive(false);
     }
 
-    // Functie om naar Panel 7 te gaan
+    // Functie om naar Panel 3 te gaan
     public void ShowPanel3()
     {
-        // Panel 2 uitzetten en Panel 3 aanzetten
+        panel1.SetActive(false);
         panel2.SetActive(false);
         panel3.SetActive(true);
     }
@@ -49,11 +47,4 @@ public class panelswitcher : MonoBehaviour
         panel2.SetActive(false);
         panel3.SetActive(false);
     }
-
-    // Functie die door de knop in Panel 1 wordt aangeroepen om naar Panel 2 te gaan
-    public void GoToPanel2()
-    {
-        ShowPanel2(); // Roep de functie aan die Panel 2 toont
-    }
 }
-

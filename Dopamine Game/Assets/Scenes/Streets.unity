@@ -24132,7 +24132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1045307891
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29900,7 +29900,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1238718551}
-        m_TargetAssemblyTypeName: panelswitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: panelswitcher1, Assembly-CSharp
         m_MethodName: CloseAllPanelss
         m_Mode: 1
         m_Arguments:
@@ -30675,7 +30675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1283476543}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
-        m_MethodName: ShowPayPanel
+        m_MethodName: Show1_1Panel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30698,7 +30698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1045307890}
-  payButton: {fileID: 684136451}
 --- !u!4 &1292804891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b484aec77272f0f448fbf79b23c56f60, type: 3}
