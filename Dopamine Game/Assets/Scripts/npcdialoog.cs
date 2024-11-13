@@ -1,19 +1,23 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCDialogue : MonoBehaviour
+public class npcdialoog : MonoBehaviour
 {
-    public List<string> dialogueLines; // Lijst van dialoogregels voor deze NPC
+    public List<string> dialogueLines; // Lijst van dialoogregels
     private DialogueSystem dialogueSystem;
 
+    // UI elementen
     // UI-elementen om te wijzigen bij het starten van de dialoog
     public Text greenText;   // Tekstvak dat groen moet worden
     public Text whiteText;   // Tekstvak dat wit moet worden
     public Image activeImage; // Afbeelding die actief moet worden
 
+
+    // Start is called before the first frame update
     void Start()
-    {
+   {
         // Zoek het DialogueSystem-object in de scène
         dialogueSystem = FindObjectOfType<DialogueSystem>();
 
@@ -23,9 +27,20 @@ public class NPCDialogue : MonoBehaviour
             activeImage.gameObject.SetActive(false);
         }
     }
-
     public void TriggerDialogue()
     {
+        if (dialogueSystem != null)
+        {
+            // Stel de visuele elementen in
+            SetUIElements();
+
+            // Start de dialoog
+            dialogueSystem.StartDialogue(dialogueLines);
+        }
+    }
+
+    private void SetUIElements()
+       {
         if (dialogueSystem != null)
         {
             // Start de dialoog
@@ -51,4 +66,4 @@ public class NPCDialogue : MonoBehaviour
             }
         }
     }
-} 
+}

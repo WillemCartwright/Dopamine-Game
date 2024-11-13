@@ -8,9 +8,9 @@ public class MoveObject : MonoBehaviour
     public GameObject item;            // Het object dat je wilt oppakken
     public GameObject tempParent;      // De tijdelijke parent (waar het object vastgehouden wordt)
     public Transform guide;            // Het punt waar het object wordt vastgehouden (bijvoorbeeld je hand)
-    public Image uiImage;              // De afbeelding die verschijnt wanneer je het object oppakt
+    public Image uiImage;              // De afbeelding die zichtbaar blijft nadat het object is opgepakt
     public Image extraUIImage;         // De vink afbeelding die we willen tonen
-    public Text statusText;            // Tekstvak dat groen wordt bij oppakken en wit bij loslaten
+    public Text statusText;            // Tekstvak dat groen blijft na oppakken
     public Text additionalText;        // Tekstvak dat lichtgrijs begint en wit wordt na oppakken
 
     private bool isHoldingItem = false;
@@ -73,7 +73,7 @@ public class MoveObject : MonoBehaviour
             additionalText.color = Color.white;
         }
 
-        // Verander statusText naar groen (#5BFE59) bij oppakken
+        // Verander statusText naar groen (#5BFE59) bij oppakken en houd het groen
         statusText.color = new Color(0.36f, 0.996f, 0.349f); // Groen (hex #5BFE59)
 
         // Zet de object fysica instellingen
@@ -94,11 +94,17 @@ public class MoveObject : MonoBehaviour
     {
         isHoldingItem = false;
 
-        // Verberg de uiImage (alleen de afbeelding voor het object)
-        uiImage.gameObject.SetActive(false);
+        // Zorg ervoor dat uiImage zichtbaar blijft, zelfs na het loslaten
+        if (!hasPickedUpItem)
+        {
+            uiImage.gameObject.SetActive(false);
+        }
 
-        // Zet statusText terug naar wit bij loslaten
-        statusText.color = Color.white;
+        // Zet statusText niet terug naar wit, zodat het groen blijft als het ooit is opgepakt
+        if (!hasPickedUpItem)
+        {
+            statusText.color = Color.white;
+        }
 
         // Zet de object fysica instellingen terug
         Rigidbody rb = item.GetComponent<Rigidbody>();
