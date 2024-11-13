@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bloemenautomaat : MonoBehaviour
+public class Bloemenautomaat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Deze functie wordt aangeroepen wanneer je op het object klikt
+    void OnMouseDown()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Verberg het object
+        gameObject.SetActive(false);
     }
 }
