@@ -1,80 +1,97 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections; // Voor coroutines
+using System.Collections;
 
 public class scherm4 : MonoBehaviour
 {
-    // Referenties naar de UI-elementen
-    public GameObject panel;             // Panel dat de knop en de feedbacktekst bevat
-    public Text codeText;                // Text om de gegenereerde code weer te geven
-    public Button generateCodeButton;    // Knop om de code te genereren
-    public Button closeButton;           // Knop om het paneel te sluiten
+    // UI elements
+    public GameObject panel;             // Panel containing the button and feedback text
+    public Text codeText;                // Text for displaying the generated code
+    public Text additionalText;          // New text that will be displayed for 8 seconds
+    public Button generateCodeButton;    // Button to generate the code
+    public Button closeButton;           // Button to close the panel
 
-    public Image activeImage;            // Actieve afbeelding
-    public Image inactiveImage;          // Inactieve afbeelding
+    public Image activeImage;            // Image that will be shown as active
+    public Image inactiveImage;          // Image that will be shown as inactive
 
-    public AudioClip soundEffect;        // Geluid dat afgespeeld moet worden
-    private AudioSource audioSource;     // AudioSource om het geluid af te spelen
+    public AudioClip soundEffect;        // Sound to be played
+    private AudioSource audioSource;     // AudioSource to play the sound
 
     void Start()
     {
-        // Maak het paneel en de tekst onzichtbaar in het begin
+        // Make the panel and texts invisible initially
         panel.SetActive(false);
         codeText.enabled = false;
+        additionalText.gameObject.SetActive(false); // Set the additional text GameObject inactive initially
 
-        // Haal de AudioSource component op
+        // Get the AudioSource component
         audioSource = GetComponent<AudioSource>();
 
-        // Koppel de generateCodeButton aan de GenerateRandomCode-methode
+        // Link generateCodeButton to GenerateRandomCode method
         generateCodeButton.onClick.AddListener(GenerateRandomCode);
 
-        // Koppel de closeButton aan de ClosePanel-methode
+        // Link closeButton to ClosePanel method
         closeButton.onClick.AddListener(ClosePanel);
     }
 
-    // Methode om het paneel zichtbaar te maken
+    // Method to show the panel
     public void ShowPanel()
     {
-        panel.SetActive(true); // Maak het paneel zichtbaar
-        codeText.enabled = false; // Verberg de tekst totdat een code gegenereerd wordt
+        panel.SetActive(true); // Show the panel
+        codeText.enabled = false; // Hide the code text until a code is generated
 
-        // Zet de afbeeldingen: maak de inactieve afbeelding inactief
+        // Set image states: make inactiveImage invisible and activeImage visible
         if (inactiveImage != null)
         {
-            inactiveImage.enabled = false; // Zet de inactieve afbeelding uit
+            inactiveImage.enabled = false; // Set the inactive image to be invisible
         }
 
-        // Speel het geluid af als het geluid is ingesteld
+        if (activeImage != null)
+        {
+            activeImage.gameObject.SetActive(true); // Ensure the activeImage GameObject is enabled
+            activeImage.enabled = true; // Set the active image to be visible
+        }
+
+        // Play the sound if it's set
         if (audioSource != null && soundEffect != null)
         {
             audioSource.PlayOneShot(soundEffect);
         }
 
-        // Start de coroutine om de tekst 8 seconden zichtbaar te maken
-        StartCoroutine(ShowTextForSeconds(8f));
+        // Start the coroutines to show the texts for 8 seconds
+        StartCoroutine(ShowTextForSeconds(codeText, 8f)); // Shows codeText
+        StartCoroutine(ShowGameObjectForSeconds(additionalText.gameObject, 8f)); // Shows additionalText for 8 seconds
     }
 
-    // Coroutine om de code 8 seconden te tonen
-    private IEnumerator ShowTextForSeconds(float seconds)
+    // Coroutine to show a text for a specified number of seconds
+    private IEnumerator ShowTextForSeconds(Text text, float seconds)
     {
-        codeText.enabled = true; // Maak de tekst zichtbaar
-        yield return new WaitForSeconds(seconds); // Wacht voor de opgegeven tijd
-        codeText.enabled = false; // Verberg de tekst weer
+        text.enabled = true; // Make the text visible
+        yield return new WaitForSeconds(seconds); // Wait for the specified time
+        text.enabled = false; // Hide the text again
     }
 
-    // Methode om een willekeurige viercijferige code te genereren
+    // Coroutine to activate a GameObject for a specified number of seconds
+    private IEnumerator ShowGameObjectForSeconds(GameObject obj, float seconds)
+    {
+        obj.SetActive(true); // Activate the GameObject
+        yield return new WaitForSeconds(seconds); // Wait for the specified time
+        obj.SetActive(false); // Deactivate the GameObject again
+    }
+
+    // Method to generate a random four-digit code
     public void GenerateRandomCode()
     {
-        // Genereer een willekeurige viercijferige code tussen 1000 en 9999
+        // Generate a random four-digit code between 1000 and 9999
         int randomCode = Random.Range(1000, 10000);
 
-        // Toon de code in de tekst
+        // Display the generated code in the text
         codeText.text = "Generated Code: " + randomCode.ToString();
     }
 
-    // Methode om het paneel te sluiten
+    // Method to close the panel
     public void ClosePanel()
     {
-        panel.SetActive(false); // Verberg het paneel
+        panel.SetActive(false); // Hide the panel
     }
 }
