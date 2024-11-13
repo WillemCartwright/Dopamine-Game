@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 642.15344, y: -263.1494}
-  m_SizeDelta: {x: 897.2814, y: 391.0975}
+  m_AnchoredPosition: {x: 83.9839, y: -214.91249}
+  m_SizeDelta: {x: 419.0233, y: 391.0975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360804993
 MonoBehaviour:
@@ -462,6 +462,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1226003915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226003916}
+  - component: {fileID: 1226003918}
+  - component: {fileID: 1226003917}
+  m_Layer: 5
+  m_Name: Text (Legacy) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1226003916
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226003915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1774204236}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 683.4993, y: -204.57602}
+  m_SizeDelta: {x: 642.854, y: 415.1772}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1226003917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226003915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Sounds:\nAcceleration of an electric car by justVova  \nhttps://freesound.org/people/justVova/sounds/761685/\n     
+    CLICK_189.wav by Jaszunio15 on \nhttps://freesound.org/people/Jaszunio15/sounds/421451/\n     
+    Pick Phone Up + Down 1by by FlatHill on \nhttps://freesound.org/people/FlatHill/sounds/211451/\n     
+    Door opening and closing 3 by JakLocke on \nhttps://freesound.org/people/JakLocke/sounds/261089/\n     
+    Error_04.wav by \ndistilleryst...\n on  \nhttps://freesound.org/people/distillerystudio/sounds/327735/\n     
+    footsteps-mockup02.flac by Aiyumi on \nhttps://freesound.org/people/Aiyumi/sounds/244472/\n     
+    \nAmbiance - Faerie Glen Nature Reserve - Crickets & Birds.wav\n by \nDamianMinnie\n
+    on \nhttps://freesound.org/people/DamianMinnie/sounds/327533/\n      HC_Footsteps
+    on Gravel_Spaced Omni's.wav by \nstinkhorn\n on \nhttps://freesound.org/people/stinkhorn/sounds/20011/\n     
+    ChargeUp.wav by BigDino1995 on   \nhttps://freesound.org/people/BigDino1995/sounds/659007/\n\n\nOpening
+    a Box Sound Effect by #1 Sound FX! on \nhttps://www.youtube.com/watch?v=arcxp6NN0xs&ab_channel=%231SoundFX%21\n\n01-33
+    Footsteps, Wood, Socks, Medium Pace.wav \nby SpliceSound  on https://freesound.org/people/SpliceSound/sounds/369836/         "
+--- !u!222 &1226003918
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226003915}
+  m_CullTransparentMesh: 1
 --- !u!1 &1585665779
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.78604, y: -261.42664}
+  m_AnchoredPosition: {x: -326.0296, y: -190.79407}
   m_SizeDelta: {x: 897.2814, y: 391.0975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765854542
@@ -705,6 +795,7 @@ RectTransform:
   - {fileID: 2027707807}
   - {fileID: 1765854541}
   - {fileID: 360804992}
+  - {fileID: 1226003916}
   - {fileID: 1585665780}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
