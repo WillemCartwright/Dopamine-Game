@@ -1,3 +1,9 @@
+/* 
+ * PLAYER MOVE
+ * Moves the Player object according to key inputs.
+ * Crouching and jumping are optional
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,13 +12,13 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody rb;
     public float walkingSpeed = 3.0f;
+
     public bool jumpEnabled;
+
     public float jumpSpeed = 1.0f;
     public bool crouchEnabled;
     public float crouchHeight = 0.4f;
     private float normalHeight;
-    
-    // Movement keys
     public KeyCode forwardKey = KeyCode.W;
     public KeyCode backKey = KeyCode.S;
     public KeyCode leftKey = KeyCode.A;
@@ -20,19 +26,10 @@ public class PlayerMove : MonoBehaviour
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode crouchKey = KeyCode.LeftControl;
 
-    // Audio for footsteps
-    public AudioSource footstepAudio;
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         normalHeight = transform.localScale.y;
-
-        // Assign the AudioSource if not assigned in the Inspector
-        if (footstepAudio == null)
-        {
-            footstepAudio = GetComponent<AudioSource>();
-        }
     }
 
     void FixedUpdate()
@@ -71,19 +68,6 @@ public class PlayerMove : MonoBehaviour
             movement += transform.up * jumpSpeed;
         }
 
-        // Toggle footstep audio based on movement input
-        if (hasInput && isGrounded())
-        {
-            if (!footstepAudio.isPlaying) // Start playing footsteps if not already playing
-            {
-                footstepAudio.Play();
-            }
-        }
-        else
-        {
-            footstepAudio.Stop(); // Stop footsteps if not moving
-        }
-
         // make sure the rigidbody isn't sliding around when there's no input
         if (!hasInput) {
           rb.constraints = 
@@ -103,6 +87,8 @@ public class PlayerMove : MonoBehaviour
         // apply movement to rigidbody
         rb.velocity = movement ;
     }
+
+    
 
     void Update() {
         if (crouchEnabled && Input.GetKeyDown(crouchKey)) {
