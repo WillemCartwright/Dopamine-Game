@@ -20601,22 +20601,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Zwerver: h\xE9, jij daar. Heb jij ook zo'n AR bril op je neus gehad?"
-  - 'Jij: hoezo?'
-  - 'Zwerver: nou iedereen draagt ze. Ze zeggen dat het helpt om even aan dit grauwe
-    leven te ontsnappen.'
-  - 'Jij: waarom?'
-  - 'Zwerver: omdat het echte leven zo leeg is geworden... Je hebt toch wel gezien
-    dat bijna niemand nog met elkaar praat?'
-  - 'Jij: en dan?'
-  - 'Zwerver: nou ja, die bril helpt blijkbaar om weer iets van geluk te voelen.
-    Een soort dopamine-shotje. Maar ja... Ik kan dit helemaal niet betalen.'
-  - 'Jij: hoezo niet?'
-  - 'Zwerver: heb jij ooit iemand in mijn situatie een AR bril zien dragen? Nee toch?
-    Ik mis de ontsnapping. Ik haal nergens plezier uit.'
-  - 'Jij: waarom dan niet?'
-  - 'Zwerver: omdat de wereld voor mij zo leeg voelt. Als ik nooit toegang krijg
-    tot de bril, blijf ik vast zitten in dit grijze niets.'
+  - 'Homeless man: Hey, whatsup. Have you also worn those AR glasses. '
+  - 'You: Why?'
+  - 'Homeless man: Well, everybody wears them. They say it helps you escap this grim
+    life.'
+  - 'You: What do you mean?'
+  - 'Homeless: Becase real life has become so meaningless. Don''t you notice nobody
+    talks to nobody anymore?'
+  - 'You: What does it matter?'
+  - 'Homeless man: Well, apparently the AR glasses help you feel some kind of happiness.
+    Like a shot of dopamine. But, I can''t afford them anymore.'
+  - 'You: Hmmmm.'
+  - 'Homeless man: Have you ever seen someone in my financial state wear those kind
+    of glasses? I don''t think so. I miss that escape. I don''t get satisfaction
+    from anything anymore.'
+  - 'You: Well why not?'
+  - 'Homeless man: I am so used to experiencing dopamine, I can''t go without it
+    anymore.'
   greenText: {fileID: 1093429583}
   whiteText: {fileID: 607339304}
   activeImage: {fileID: 1463669977}
@@ -50697,24 +50698,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'Oma: wat heb je daar toch op je hoofd, kind? Zo''n ding voor je ogen?'
-  - 'Jij: een AR bril, mevrouw.'
-  - 'Oma: en wat moet je daarmee? Je kunt toch gewoon om je heen kijken?'
-  - 'Jij: nou, hiermee kan ik in een digitale wereld stappen, mevrouw. Even weg van
-    de realiteit.'
-  - 'Oma: maar waarom zou je dat willen? De echte wereld is toch ook mooi en gezellig?'
-  - 'Jij: mensen zijn op zoek naar een makkelijke en snelle manier om leuke dingen
-    te beleven, waarbijj dat in de echte wereld saai is.'
-  - 'Oma: vroeger gingen we gewoon naar buiten. Wandelingetje, praatje met de buren.
-    Dat was genoeg belevenis hoor! Heel fijn was dat contact.'
-  - 'Jij: ja, maar nu gaat alles digitaal. Mensen zien elkaar bijna niet meer. Ik
-    heb het gevoel dat dat ook niet nodig is.'
-  - 'Oma: daar snap ik niks van. Wat is het leven nog waard als je geen echte mensen
-    meer spreekt en alleen bent?'
-  - 'Jij: het is veel makkelijker zo. Hier hoeven we geen moeite voor doen.'
-  - 'Oma: Makkelijk? Daar geloof ik niks van. Het echte leven is soms gewoon moeilijk
-    en door samen met elkaar te zijn maakt dat het juist makkelijker. Op die manier
-    ben je niet alleen en krijg je energie van elkaar. '
+  - 'Grandma: What in god''s name is that in your hands? What kind of glasses are
+    those?'
+  - 'You: AR glasses, ma''am.'
+  - 'Grandma: What is the purpose of those glasses? Can''t you just look around?'
+  - 'You: Well, these enable me to step into a digital world ma''am, a break from
+    reality.'
+  - 'Grandma: Why would you want that? Isn''t the real world good enough for you?'
+  - 'You: People are looking for a quick and simple way to have a good time. It is
+    just too much of an effort to go outside.'
+  - 'Grandma: In my days you  just went outside, walked around and spoke to your
+    neighbours.'
+  - 'You: Yeah, but now everything is digital. people rarely visit eachother in real
+    life anymore, and I dont think it''s necessary anymore.'
+  - 'Grandma: I dont get it, what is the point of life when you don''t see eachother
+    face to face anymore? And if you''re constantly alone?'
+  - 'You: It''s much easier like this. Its quick, simple and low effort.'
+  - 'Grandma: Easy? Nonsense. Real life can be tough, but being together with your
+    fellow people will make it easier, and worth while.'
   greenText: {fileID: 1634278144}
   whiteText: {fileID: 1867331001}
   activeImage: {fileID: 210620444}
