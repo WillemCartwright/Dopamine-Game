@@ -11,9 +11,17 @@ public class NewBehaviourScript : MonoBehaviour
     public Text temporaryMessage;            // Tijdelijk tekstvak voor de 4-seconden-boodschap
     public GameObject targetImageObject;     // Het GameObject van de afbeelding die actief moet worden gezet
     public GameObject inactiveImageObject;   // Het GameObject van de afbeelding die inactief moet worden gezet
+    public GameObject additionalImageObject; // De extra afbeelding die tegelijkertijd actief moet worden gezet
+
+    // Geluidsbron en geluid
+    public AudioClip soundEffect;            // Het geluid dat moet worden afgespeeld
+    private AudioSource audioSource;          // De AudioSource component
 
     void Start()
     {
+        // Zorg ervoor dat de AudioSource is toegevoegd aan het huidige GameObject
+        audioSource = gameObject.AddComponent<AudioSource>();
+
         // Maak het paneel in het begin onzichtbaar
         panel.SetActive(false);
 
@@ -25,9 +33,13 @@ public class NewBehaviourScript : MonoBehaviour
         if (temporaryMessage != null)
             temporaryMessage.gameObject.SetActive(false);
 
-        // Zorg ervoor dat de andere afbeelding inactief is
+        // Zorg ervoor dat de andere afbeelding in het begin actief is
         if (inactiveImageObject != null)
-            inactiveImageObject.SetActive(false);
+            inactiveImageObject.SetActive(true);
+
+        // Zorg ervoor dat de extra afbeelding in het begin inactief is
+        if (additionalImageObject != null)
+            additionalImageObject.SetActive(false);
     }
 
     // Methode om het paneel zichtbaar te maken
@@ -48,9 +60,19 @@ public class NewBehaviourScript : MonoBehaviour
         if (targetImageObject != null)
             targetImageObject.SetActive(true);
 
-        // Zorg ervoor dat de andere afbeelding inactief blijft
+        // Zet de extra afbeelding actief
+        if (additionalImageObject != null)
+            additionalImageObject.SetActive(true);
+
+        // Maak de andere afbeelding inactief
         if (inactiveImageObject != null)
             inactiveImageObject.SetActive(false);
+
+        // Speel het geluid af als het is toegewezen
+        if (soundEffect != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(soundEffect); // Speel het geluid af
+        }
 
         // Start de coroutine om de tijdelijke boodschap te tonen
         if (temporaryMessage != null)
@@ -63,7 +85,7 @@ public class NewBehaviourScript : MonoBehaviour
     private IEnumerator DisplayTemporaryMessage()
     {
         temporaryMessage.gameObject.SetActive(true); // Maak het tekstvak zichtbaar
-        yield return new WaitForSeconds(8);          // Wacht 4 seconden
+        yield return new WaitForSeconds(4);          // Wacht 4 seconden
         temporaryMessage.gameObject.SetActive(false); // Verberg het tekstvak weer
     }
 }

@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         normalHeight = transform.localScale.y;
-        
+
         // Haal de AudioSource op en stel het geluid in
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = walkingClip;
@@ -65,12 +65,12 @@ public class PlayerMove : MonoBehaviour
         // Controleren of het loopgeluid moet worden afgespeeld
         if (hasInput && !isWalking)
         {
-            audioSource.Play();
+            audioSource.Play(); // Speel het geluid af
             isWalking = true;
         }
         else if (!hasInput && isWalking)
         {
-            audioSource.Pause();
+            audioSource.Pause(); // Pauzeer het geluid
             isWalking = false;
         }
 
@@ -81,16 +81,13 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Beperk beweging als er geen input is
-        if (!hasInput) {
-            rb.constraints = 
-                RigidbodyConstraints.FreezePositionX | 
-                RigidbodyConstraints.FreezePositionZ |
-                RigidbodyConstraints.FreezeRotationY |
-                RigidbodyConstraints.FreezeRotationZ;
-        } else {
-            rb.constraints = 
-                RigidbodyConstraints.FreezeRotationY |
-                RigidbodyConstraints.FreezeRotationZ;
+        if (!hasInput)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
 
         // Handhaaf verticale snelheid
@@ -105,7 +102,7 @@ public class PlayerMove : MonoBehaviour
             // Crouching
             transform.localScale = new Vector3(transform.localScale.x, crouchHeight, transform.localScale.z);
         } else if (crouchEnabled && Input.GetKeyUp(crouchKey)) {
-            // Not crouching
+            // Niet crouching
             transform.localScale = new Vector3(transform.localScale.x, normalHeight, transform.localScale.z);
         }
     }
@@ -115,4 +112,3 @@ public class PlayerMove : MonoBehaviour
         return Physics.Raycast(transform.position, -Vector3.up, 0.1f + transform.localScale.y);
     }
 }
-

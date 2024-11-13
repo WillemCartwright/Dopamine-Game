@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections; // Voor coroutines
 
 public class scherm4 : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class scherm4 : MonoBehaviour
     public Text codeText;                // Text om de gegenereerde code weer te geven
     public Button generateCodeButton;    // Knop om de code te genereren
     public Button closeButton;           // Knop om het paneel te sluiten
+
+    public Image activeImage;            // Actieve afbeelding
+    public Image inactiveImage;          // Inactieve afbeelding
 
     public AudioClip soundEffect;        // Geluid dat afgespeeld moet worden
     private AudioSource audioSource;     // AudioSource om het geluid af te spelen
@@ -34,11 +38,28 @@ public class scherm4 : MonoBehaviour
         panel.SetActive(true); // Maak het paneel zichtbaar
         codeText.enabled = false; // Verberg de tekst totdat een code gegenereerd wordt
 
+        // Zet de afbeeldingen: maak de inactieve afbeelding inactief
+        if (inactiveImage != null)
+        {
+            inactiveImage.enabled = false; // Zet de inactieve afbeelding uit
+        }
+
         // Speel het geluid af als het geluid is ingesteld
         if (audioSource != null && soundEffect != null)
         {
             audioSource.PlayOneShot(soundEffect);
         }
+
+        // Start de coroutine om de tekst 8 seconden zichtbaar te maken
+        StartCoroutine(ShowTextForSeconds(8f));
+    }
+
+    // Coroutine om de code 8 seconden te tonen
+    private IEnumerator ShowTextForSeconds(float seconds)
+    {
+        codeText.enabled = true; // Maak de tekst zichtbaar
+        yield return new WaitForSeconds(seconds); // Wacht voor de opgegeven tijd
+        codeText.enabled = false; // Verberg de tekst weer
     }
 
     // Methode om een willekeurige viercijferige code te genereren
@@ -49,7 +70,6 @@ public class scherm4 : MonoBehaviour
 
         // Toon de code in de tekst
         codeText.text = "Generated Code: " + randomCode.ToString();
-        codeText.enabled = true; // Maak de tekst zichtbaar
     }
 
     // Methode om het paneel te sluiten

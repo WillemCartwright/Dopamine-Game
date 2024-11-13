@@ -12184,7 +12184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc55b43bd086c4ea7be3be7334fab194, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71f82002465034cde913cfb735b4bc12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22843,6 +22843,9 @@ MonoBehaviour:
   greenText: {fileID: 1093429583}
   whiteText: {fileID: 607339304}
   activeImage: {fileID: 1463669977}
+  extraImage: {fileID: 536625761}
+  inactiveImage: {fileID: 536625761}
+  temporaryText: {fileID: 345480561}
 --- !u!114 &848751506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36251,6 +36254,7 @@ GameObject:
   - component: {fileID: 1283476542}
   - component: {fileID: 1283476543}
   - component: {fileID: 1283476538}
+  - component: {fileID: 1283476544}
   m_Layer: 0
   m_Name: screen vendingmachine
   m_TagString: Untagged
@@ -36388,9 +36392,107 @@ MonoBehaviour:
   panel: {fileID: 1045307890}
   textFieldGreen: {fileID: 1891014834}
   textFieldWhite: {fileID: 1093429583}
-  temporaryMessage: {fileID: 0}
+  temporaryMessage: {fileID: 1733887778}
   targetImageObject: {fileID: 579061684}
-  inactiveImageObject: {fileID: 0}
+  inactiveImageObject: {fileID: 536625759}
+  additionalImageObject: {fileID: 495362117}
+  soundEffect: {fileID: 0}
+--- !u!82 &1283476544
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283476537}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e15fa1232e3ae4e3e909a5b429586e59, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1284040486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
