@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NewBehaviourScript : MonoBehaviour
 {
     // Referenties naar UI-elementen
-    public GameObject panel;             // Panel dat zichtbaar/onzichtbaar gemaakt moet worden
-    public Text textFieldGreen;          // Tekstvak dat groen moet worden
-    public Text textFieldWhite;          // Tekstvak dat wit moet worden
-    public GameObject targetImageObject; // Het GameObject van de afbeelding die actief moet worden gezet
+    public GameObject panel;                 // Panel dat zichtbaar/onzichtbaar gemaakt moet worden
+    public Text textFieldGreen;              // Tekstvak dat groen moet worden
+    public Text textFieldWhite;              // Tekstvak dat wit moet worden
+    public Text temporaryMessage;            // Tijdelijk tekstvak voor de 4-seconden-boodschap
+    public GameObject targetImageObject;     // Het GameObject van de afbeelding die actief moet worden gezet
+    public GameObject inactiveImageObject;   // Het GameObject van de afbeelding die inactief moet worden gezet
 
     void Start()
     {
@@ -17,6 +20,14 @@ public class NewBehaviourScript : MonoBehaviour
         // Maak de afbeelding onzichtbaar in het begin
         if (targetImageObject != null)
             targetImageObject.SetActive(false);
+
+        // Maak de tijdelijke tekst onzichtbaar in het begin
+        if (temporaryMessage != null)
+            temporaryMessage.gameObject.SetActive(false);
+
+        // Zorg ervoor dat de andere afbeelding inactief is
+        if (inactiveImageObject != null)
+            inactiveImageObject.SetActive(false);
     }
 
     // Methode om het paneel zichtbaar te maken
@@ -36,5 +47,23 @@ public class NewBehaviourScript : MonoBehaviour
         // Zet de afbeelding actief
         if (targetImageObject != null)
             targetImageObject.SetActive(true);
+
+        // Zorg ervoor dat de andere afbeelding inactief blijft
+        if (inactiveImageObject != null)
+            inactiveImageObject.SetActive(false);
+
+        // Start de coroutine om de tijdelijke boodschap te tonen
+        if (temporaryMessage != null)
+        {
+            StartCoroutine(DisplayTemporaryMessage());
+        }
+    }
+
+    // Coroutine om de tijdelijke boodschap te tonen voor 4 seconden
+    private IEnumerator DisplayTemporaryMessage()
+    {
+        temporaryMessage.gameObject.SetActive(true); // Maak het tekstvak zichtbaar
+        yield return new WaitForSeconds(8);          // Wacht 4 seconden
+        temporaryMessage.gameObject.SetActive(false); // Verberg het tekstvak weer
     }
 }
