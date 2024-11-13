@@ -43508,17 +43508,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce930b385572384f955b2d743e3ba7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 5
-  jumpEnabled: 0
+  walkingSpeed: 7
+  jumpEnabled: 1
   jumpSpeed: 1
-  crouchEnabled: 0
+  crouchEnabled: 1
   crouchHeight: 0.4
   forwardKey: 119
   backKey: 115
   leftKey: 97
   rightKey: 100
   jumpKey: 32
-  crouchKey: 306
+  crouchKey: 304
 --- !u!114 &1646998804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43531,7 +43531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff3506d9cdcdd94e8ba9df48b4d8ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookSpeed: 3
+  lookSpeed: 5
 --- !u!114 &1646998805
 MonoBehaviour:
   m_ObjectHideFlags: 0
