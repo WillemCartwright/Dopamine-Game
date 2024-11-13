@@ -5546,8 +5546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000095367, y: 52}
-  m_SizeDelta: {x: 415.6875, y: 69.6077}
+  m_AnchoredPosition: {x: -8.7771, y: -23.8379}
+  m_SizeDelta: {x: 516.0426, y: 380.6241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214641512
 MonoBehaviour:
@@ -5571,18 +5571,32 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hier komt alle informatie over de knoppen die gebruikt moeten worden.
+  m_Text: 'Controls:
+
+
+    WASD to walk around
+
+    Spacebar to jump
+
+    Shift to
+    crouch
+
+    E to interact
+
+    Q to put on glasses (when able)
+
+'
 --- !u!222 &214641513
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18929,120 +18943,19 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &729120416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1428826881}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_Name
-      value: Tree (51)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8100320773420232829, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b96f091c13917b1489d6a09892c668a9, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 729120421}
-    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 729120420}
-  m_SourcePrefab: {fileID: 100100000, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
---- !u!4 &729120417 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-  m_PrefabInstance: {fileID: 729120416}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &729120418 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-  m_PrefabInstance: {fileID: 729120416}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &729120419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
-  m_PrefabInstance: {fileID: 729120416}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &729120420
-BoxCollider:
 --- !u!1 &727994255
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729120418}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.52406174, y: 2.4884548, z: 0.15470907}
-  m_Center: {x: 0.18100432, y: 1.1727638, z: 0.0058908947}
---- !u!82 &729120421
-AudioSource:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727994256}
-  - component: {fileID: 727994258}
   - component: {fileID: 727994257}
-  m_Layer: 5
-  m_Name: '-50%  '
+  - component: {fileID: 727994259}
+  m_Layer: 0
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19108,97 +19021,89 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729120419}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9de05a8af356c406ea9eeb0cf52f973d, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_CullTransparentMesh: 1
+--- !u!222 &727994259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727994255}
   m_CullTransparentMesh: 1
+--- !u!1001 &729120416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1428826881}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_Name
+      value: Tree (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100320773420232829, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b96f091c13917b1489d6a09892c668a9, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 727994258}
+  m_SourcePrefab: {fileID: 100100000, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+--- !u!4 &729120417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+  m_PrefabInstance: {fileID: 729120416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &729120419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
+  m_PrefabInstance: {fileID: 729120416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &738815356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32935,8 +32840,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6081, y: 3.8401}
-  m_SizeDelta: {x: 519.4415, y: 212.793}
+  m_AnchoredPosition: {x: -2.767, y: -0.8563}
+  m_SizeDelta: {x: 765.883, y: 345.647}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169688093
 MonoBehaviour:
@@ -32972,13 +32877,13 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Welcome to the year 2050, where everything is automated and human contact
-    has become rare. The world around you feels dull and monotonous, and your dopamine
+    has become rare. The world around you feels dull and monotonous. Your dopamine
     levels \u2013 which bring happiness and motivation \u2013 are decreasing due
-    to the monotony of daily life. The AR headset offers an escape: a digital world
+    to the monotony of daily life. The AR glasses offers an escape: a digital world
     where your dopamine levels can temporarily rise. But beware: excessive use of
-    the VR headset leads to desensitization, and the happiness you experience will
+    the AR glasses lead to desensitization, and the happiness you experience will
     fade. To maintain balance, you must first complete tasks in the real world before
-    being allowed to use the VR headset. Can you find the right balance between reality
+    being allowed to use the AR glasses. Can you find the right balance between reality
     and virtuality?"
 --- !u!222 &1169688094
 CanvasRenderer:
@@ -36483,7 +36388,9 @@ MonoBehaviour:
   panel: {fileID: 1045307890}
   textFieldGreen: {fileID: 1891014834}
   textFieldWhite: {fileID: 1093429583}
+  temporaryMessage: {fileID: 0}
   targetImageObject: {fileID: 579061684}
+  inactiveImageObject: {fileID: 0}
 --- !u!1 &1284040486 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1840eae0b6532d54c8475db27f9e85d0, type: 3}
@@ -43254,11 +43161,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 42
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

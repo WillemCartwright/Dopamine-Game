@@ -316,7 +316,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thanks for playing
+  m_Text: THANKS FOR PLAYING!
 --- !u!222 &625964862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -586,8 +586,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.183048, y: 60.1004}
-  m_SizeDelta: {x: 1692.0981, y: 186.4258}
+  m_AnchoredPosition: {x: 11, y: 60.1004}
+  m_SizeDelta: {x: 1753.9507, y: 186.4258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585665781
 MonoBehaviour:
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b3e6c63e4842ce41bb8efe62bf834a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0be6a7e9be350a4d960a03e128aec4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
