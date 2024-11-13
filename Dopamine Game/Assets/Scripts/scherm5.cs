@@ -9,12 +9,17 @@ public class Scherm5 : MonoBehaviour
     public Text statusText;                // Tekstvak dat groen (#1EFB1F) moet worden
     public Text additionalText;            // Het tweede tekstvak dat van grijs naar wit moet gaan
     public Image confirmationImage;        // Afbeelding die actief moet worden
+    public AudioClip soundEffect;          // Geluid dat afgespeeld moet worden
+    private AudioSource audioSource;       // AudioSource om het geluid af te spelen
 
     void Start()
     {
         // Maak het paneel en de afbeelding in het begin onzichtbaar
         panel.SetActive(false);
         confirmationImage.gameObject.SetActive(false);
+
+        // Haal de AudioSource component op
+        audioSource = GetComponent<AudioSource>();
 
         // Koppel de payButton aan de ShowPayPanel-methode
         payButton.onClick.AddListener(ShowPayPanel);
@@ -31,6 +36,13 @@ public class Scherm5 : MonoBehaviour
         statusText.color = new Color(0.118f, 0.984f, 0.122f); // Verander statusText naar groen (#1EFB1F)
         additionalText.color = Color.white;        // Verander additionalText naar wit
         confirmationImage.gameObject.SetActive(true); // Zet de afbeelding actief
+
+        // Speel het geluid af als het geluid is ingesteld
+        if (audioSource != null && soundEffect != null)
+        {
+            audioSource.PlayOneShot(soundEffect);
+        }
+
         Debug.Log("Pay button pressed");
     }
 }

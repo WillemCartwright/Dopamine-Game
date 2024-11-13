@@ -9,11 +9,17 @@ public class scherm4 : MonoBehaviour
     public Button generateCodeButton;    // Knop om de code te genereren
     public Button closeButton;           // Knop om het paneel te sluiten
 
+    public AudioClip soundEffect;        // Geluid dat afgespeeld moet worden
+    private AudioSource audioSource;     // AudioSource om het geluid af te spelen
+
     void Start()
     {
         // Maak het paneel en de tekst onzichtbaar in het begin
         panel.SetActive(false);
         codeText.enabled = false;
+
+        // Haal de AudioSource component op
+        audioSource = GetComponent<AudioSource>();
 
         // Koppel de generateCodeButton aan de GenerateRandomCode-methode
         generateCodeButton.onClick.AddListener(GenerateRandomCode);
@@ -27,6 +33,12 @@ public class scherm4 : MonoBehaviour
     {
         panel.SetActive(true); // Maak het paneel zichtbaar
         codeText.enabled = false; // Verberg de tekst totdat een code gegenereerd wordt
+
+        // Speel het geluid af als het geluid is ingesteld
+        if (audioSource != null && soundEffect != null)
+        {
+            audioSource.PlayOneShot(soundEffect);
+        }
     }
 
     // Methode om een willekeurige viercijferige code te genereren
@@ -46,4 +58,3 @@ public class scherm4 : MonoBehaviour
         panel.SetActive(false); // Verberg het paneel
     }
 }
-
