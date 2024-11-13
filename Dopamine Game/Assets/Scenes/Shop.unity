@@ -7658,7 +7658,7 @@ GameObject:
   - component: {fileID: 565931236}
   - component: {fileID: 565931235}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13306,7 +13306,7 @@ MonoBehaviour:
   statusText: {fileID: 1646854588}
   additionalText: {fileID: 375481057}
   confirmationImage: {fileID: 120749836}
---- !u!114 &1053685853
+--- !u!114 &1053685856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13324,7 +13324,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1053685852}
-        m_TargetAssemblyTypeName: scherm5, Assembly-CSharp
+        m_TargetAssemblyTypeName: Scherm5, Assembly-CSharp
         m_MethodName: ShowPayPanel
         m_Mode: 1
         m_Arguments:
@@ -18044,9 +18044,6 @@ GameObject:
   - component: {fileID: 1435164437}
   - component: {fileID: 1435164436}
   - component: {fileID: 1435164435}
-  - component: {fileID: 1435164442}
-  - component: {fileID: 1435164443}
-  - component: {fileID: 1435164444}
   m_Layer: 0
   m_Name: Speler
   m_TagString: Untagged
@@ -18206,59 +18203,6 @@ Transform:
   - {fileID: 1490646278}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 48.88, z: 0}
---- !u!114 &1435164442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435164434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbc5bb53d928478e82ea8da10b2016a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1490646282}
-  interactText: {fileID: 0}
-  interactableObjects:
-  - {fileID: 1578555496}
-  - {fileID: 1575272875}
-  - {fileID: 1053685849}
-  maxDistance: 2.5
---- !u!114 &1435164443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435164434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbc5bb53d928478e82ea8da10b2016a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1490646282}
-  interactText: {fileID: 0}
-  interactableObjects:
-  - {fileID: 1415501969}
-  maxDistance: 5
---- !u!114 &1435164444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435164434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbc5bb53d928478e82ea8da10b2016a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1490646282}
-  interactText: {fileID: 0}
-  interactableObjects:
-  - {fileID: 1415501969}
-  maxDistance: 5
 --- !u!1001 &1445163387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19888,7 +19832,7 @@ Transform:
   m_GameObject: {fileID: 1575272875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.99999243, z: -0, w: 0.0038884655}
-  m_LocalPosition: {x: -0.6691817, y: 1.426, z: 2.8079693}
+  m_LocalPosition: {x: -0.7, y: 1.426, z: 2.81}
   m_LocalScale: {x: -0.008135401, y: 1.0487319, z: -0.8303075}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21634,7 +21578,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e59f1032a0e2e47c19bca24baad36a9f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1053685853}
+      addedObject: {fileID: 1053685856}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e59f1032a0e2e47c19bca24baad36a9f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1053685852}
