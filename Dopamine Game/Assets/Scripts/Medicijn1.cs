@@ -1,45 +1,69 @@
 using UnityEngine;
-using UnityEngine.UI; // Zorg ervoor dat je de UI namespace hebt voor toegang tot de UI-elementen
+using UnityEngine.UI; // For UI elements
+using UnityEngine.SceneManagement; // For scene management
+using System.Collections; // For IEnumerator and coroutines
 
 public class Medicijn1 : MonoBehaviour
 {
-    // Referentie naar het UI-element
-    public GameObject panel; // Het paneel dat zichtbaar of onzichtbaar gemaakt moet worden
+    // Reference to the UI element
+    public GameObject panel; // The panel to be shown or hidden
 
-    // UI-elementen om te wijzigen wanneer het paneel wordt weergegeven
-    public Text greenText;   // Groene tekst (voor #5BFE59)
-    public Image activeImage; // De afbeelding die zichtbaar moet worden
+    // UI elements to modify when the panel is displayed
+    public Text greenText;   // Green text (for #5BFE59)
+    public Image activeImage; // The image to make visible
+
+    // Name of the new scene you want to load
+    public string newSceneName; 
 
     void Start()
     {
-        // Maak het paneel in het begin onzichtbaar
+        // Hide the panel initially
         panel.SetActive(false);
     }
 
-    // Methode om het paneel zichtbaar te maken
+    // Method to show the panel
     public void Show10Panel()
     {
-        // Maak het paneel zichtbaar
+        // Make the panel visible
         panel.SetActive(true); 
-        Debug.Log("Paneel is nu zichtbaar");
+        Debug.Log("Panel is now visible");
 
-        // Pas de UI-elementen aan
+        // Update the UI elements
         SetUIElements();
+
+        // Start the coroutine to switch scenes after 8 seconds
+        StartCoroutine(LoadSceneAfterDelay(8f));
     }
 
-    // Methode om de UI-elementen aan te passen
+    // Method to update UI elements
     private void SetUIElements()
     {
-        // Zet de kleur van greenText naar groen (#5BFE59)
+        // Set the color of greenText to green (#5BFE59)
         if (greenText != null)
         {
-            greenText.color = new Color(0.36f, 0.996f, 0.349f); // Groen (hex #5BFE59)
+            greenText.color = new Color(0.36f, 0.996f, 0.349f); // Green (hex #5BFE59)
         }
 
-        // Zet de afbeelding zichtbaar
+        // Set the image visible
         if (activeImage != null)
         {
-            activeImage.gameObject.SetActive(true); // Zorg ervoor dat de afbeelding zichtbaar is
+            activeImage.gameObject.SetActive(true); // Ensure the image is visible
+        }
+    }
+
+    // Coroutine to load the scene after an 8-second delay
+    private IEnumerator LoadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait 8 seconds
+
+        // Load the new scene if the scene name is correctly set
+        if (!string.IsNullOrEmpty(newSceneName))
+        {
+            SceneManager.LoadScene(newSceneName);
+        }
+        else
+        {
+            Debug.LogWarning("The new scene name is not set!");
         }
     }
 }
