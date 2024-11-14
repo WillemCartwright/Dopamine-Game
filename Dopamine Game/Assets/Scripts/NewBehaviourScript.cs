@@ -85,7 +85,7 @@ public class NewBehaviourScript : MonoBehaviour
     private IEnumerator DisplayTemporaryMessage()
     {
         temporaryMessage.gameObject.SetActive(true); // Maak het tekstvak zichtbaar
-        yield return new WaitForSeconds(4);          // Wacht 4 seconden
+        yield return new WaitForSeconds(8);          // Wacht 4 seconden
         temporaryMessage.gameObject.SetActive(false); // Verberg het tekstvak weer
     }
 }

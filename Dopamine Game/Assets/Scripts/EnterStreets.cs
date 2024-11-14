@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnterStreets : MonoBehaviour
 {
     void OnTriggerEnter() {
-        SceneManager.LoadScene("Streets", LoadSceneMode.Single);
+        SceneManager.LoadScene("streetdeel2", LoadSceneMode.Single);
     }
 
 }
